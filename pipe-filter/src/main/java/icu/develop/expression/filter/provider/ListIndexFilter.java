@@ -24,7 +24,7 @@ public class ListIndexFilter extends BasePipeFilter<Object, Object> {
      * 参数格式  list-index:n n表示下标，从1开始
      *
      * @param wrapper the function argument
-     * @return
+     * @return 包裹对象
      */
     @Override
     public PipeDataWrapper<Object> handlerApply(PipeDataWrapper<Object> wrapper) {

@@ -92,13 +92,11 @@ public class ReplaceExcludeNumberFilter extends BasePipeFilter<Object, Object> {
 
     /**
      * 方法描述:替换数字之外的所有 老字符串为新字符串
-     * @param str
-     * @param oldStr
-     * @param newStr
-     * @method replaceExcludeNumber
-     * @return: java.lang.String
-     * @author: lixiaobo
-     * @time: 2023/7/27 13:57
+     * @param str 待处理字符串
+     * @param oldStr 带替换字符串
+     * @param newStr 要替换字符串
+     * @return java.lang.String
+     * @since  2023/7/27 13:57
      */
     public static String replaceExcludeNumber(String str,String oldStr,String newStr){
         StringBuilder sb = new StringBuilder();

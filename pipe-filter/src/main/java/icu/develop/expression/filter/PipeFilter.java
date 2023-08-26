@@ -17,7 +17,7 @@ public interface PipeFilter<T, R> extends Function<PipeDataWrapper<T>, PipeDataW
      * 执行具体方法
      *
      * @param wrapper the function argument
-     * @return
+     * @return 包裹对象
      */
     @Override
     PipeDataWrapper<R> apply(PipeDataWrapper<T> wrapper);

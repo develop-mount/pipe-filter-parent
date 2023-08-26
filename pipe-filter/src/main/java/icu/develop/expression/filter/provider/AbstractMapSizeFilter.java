@@ -32,9 +32,9 @@ public abstract class AbstractMapSizeFilter extends AbstractMatchListFilter {
     /**
      * get object from map or object
      *
-     * @param value
-     * @param center
-     * @return
+     * @param value 值
+     * @param center 匹配值
+     * @return 包裹对象
      */
     protected PipeDataWrapper<Object> getPipeDataOfMap(Object value, String center) {
         Map<Object, Object> colMap;

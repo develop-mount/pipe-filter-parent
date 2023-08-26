@@ -26,7 +26,7 @@ public class ListRangeFilter extends BasePipeFilter<Object, Object> {
      * list-range:index,count 从index开始，获取count个数量
      *
      * @param wrapper the function argument
-     * @return
+     * @return 包裹对象
      */
     @Override
     public PipeDataWrapper<Object> handlerApply(PipeDataWrapper<Object> wrapper) {

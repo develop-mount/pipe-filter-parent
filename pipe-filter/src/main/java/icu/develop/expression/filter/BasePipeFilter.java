@@ -86,8 +86,8 @@ public abstract class BasePipeFilter<T, R> implements PipeFilter<T, R> {
 
     /**
      * 处理指令逻辑
-     * @param wrapper
-     * @return
+     * @param wrapper wrapper
+     * @return 包裹对象
      */
     protected PipeDataWrapper<R> handlerApply(PipeDataWrapper<T> wrapper) {
         return null;

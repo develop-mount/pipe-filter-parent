@@ -131,9 +131,9 @@ public abstract class AbstractSizeFilter extends BasePipeFilter<Object, Object> 
 
     /**
      *
-     * @param valueInt
-     * @param trafficUnit
-     * @return
+     * @param valueInt 值
+     * @param trafficUnit 单位
+     * @return 转换后的字符串
      */
     protected static String getResult(double valueInt, TrafficUnit trafficUnit) {
 
@@ -153,6 +153,7 @@ public abstract class AbstractSizeFilter extends BasePipeFilter<Object, Object> 
      * 匹配大小及输出
      * @param value 待比较大小
      * @param input 限制大小
+     * @param trafficUnit 单位
      * @return 数据包裹
      */
     protected abstract PipeDataWrapper<Object> matchSize(Double value, Double input, TrafficUnit trafficUnit);

@@ -65,10 +65,10 @@ public class DateUtils {
     /**
      * convert string to date
      *
-     * @param dateString
-     * @param dateFormat
-     * @return
-     * @throws ParseException
+     * @param dateString 字符串
+     * @param dateFormat 格式
+     * @return 转换后的日期
+     * @throws ParseException 异常
      */
     public static Date parseDate(String dateString, String dateFormat) throws ParseException {
         if (StringUtils.isEmpty(dateFormat)) {
@@ -80,10 +80,10 @@ public class DateUtils {
     /**
      * convert string to date
      *
-     * @param dateString
-     * @param dateFormat
-     * @param local
-     * @return
+     * @param dateString 字符串
+     * @param dateFormat 格式
+     * @param local {@link Locale}
+     * @return 日期对象
      */
     public static LocalDateTime parseLocalDateTime(String dateString, String dateFormat, Locale local) {
         if (StringUtils.isEmpty(dateFormat)) {
@@ -99,10 +99,10 @@ public class DateUtils {
     /**
      * convert string to date
      *
-     * @param dateString
-     * @param dateFormat
-     * @param local
-     * @return
+     * @param dateString 字符串
+     * @param dateFormat 格式
+     * @param local {@link Locale}
+     * @return 日期
      */
     public static LocalDate parseLocalDate(String dateString, String dateFormat, Locale local) {
         if (StringUtils.isEmpty(dateFormat)) {
@@ -118,9 +118,9 @@ public class DateUtils {
     /**
      * convert string to date
      *
-     * @param dateString
-     * @return
-     * @throws ParseException
+     * @param dateString 日期字符串
+     * @return 日期
+     * @throws ParseException 异常
      */
     public static Date parseDate(String dateString) throws ParseException {
         return parseDate(dateString, switchDateFormat(dateString));
@@ -129,8 +129,8 @@ public class DateUtils {
     /**
      * switch date format
      *
-     * @param dateString
-     * @return
+     * @param dateString 日期字符串
+     * @return 字符串
      */
     public static String switchDateFormat(String dateString) {
         int length = dateString.length();
@@ -163,8 +163,8 @@ public class DateUtils {
      * <p>
      * yyyy-MM-dd HH:mm:ss
      *
-     * @param date
-     * @return
+     * @param date 日期对象
+     * @return 日期字符串
      */
     public static String format(Date date) {
         return format(date, null);
@@ -173,9 +173,9 @@ public class DateUtils {
     /**
      * Format date
      *
-     * @param date
-     * @param dateFormat
-     * @return
+     * @param date 日期对象
+     * @param dateFormat 格式
+     * @return 字符串
      */
     public static String format(Date date, String dateFormat) {
         if (date == null) {
@@ -190,9 +190,10 @@ public class DateUtils {
     /**
      * Format date
      *
-     * @param date
-     * @param dateFormat
-     * @return
+     * @param date 日期对象
+     * @param dateFormat 格式
+     * @param local {@link Locale}
+     * @return 日期字符串
      */
     public static String format(LocalDateTime date, String dateFormat, Locale local) {
         if (date == null) {
@@ -211,9 +212,9 @@ public class DateUtils {
     /**
      * Format date
      *
-     * @param date
-     * @param dateFormat
-     * @return
+     * @param date 日期对象
+     * @param dateFormat 格式
+     * @return 日期字符串
      */
     public static String format(LocalDate date, String dateFormat) {
         return format(date, dateFormat, null);
@@ -222,9 +223,10 @@ public class DateUtils {
     /**
      * Format date
      *
-     * @param date
-     * @param dateFormat
-     * @return
+     * @param date 日期对象
+     * @param dateFormat 格式
+     * @param local {@link Locale}
+     * @return 日期字符串
      */
     public static String format(LocalDate date, String dateFormat, Locale local) {
         if (date == null) {
@@ -243,9 +245,9 @@ public class DateUtils {
     /**
      * Format date
      *
-     * @param date
-     * @param dateFormat
-     * @return
+     * @param date 日期对象
+     * @param dateFormat 格式
+     * @return 日期字符串
      */
     public static String format(LocalDateTime date, String dateFormat) {
         return format(date, dateFormat, null);
@@ -267,13 +269,6 @@ public class DateUtils {
         return simpleDateFormat;
     }
 
-    /**
-     * Determine if it is a date format.
-     *
-     * @param formatIndex
-     * @param formatString
-     * @return
-     */
     public static boolean isADateFormatUncached(Short formatIndex, String formatString) {
         // First up, is this an internal date format?
         if (isInternalDateFormat(formatIndex)) {
@@ -347,9 +342,7 @@ public class DateUtils {
         return result;
     }
 
-    /**
-     * Given a format ID this will check whether the format represents an internal excel date format or not.
-     */
+
     public static boolean isInternalDateFormat(short format) {
         switch (format) {
             // Internal Date Formats as described on page 427 in

@@ -58,10 +58,6 @@ public enum TrafficUnit {
 
     static final long MAX = Long.MAX_VALUE;
 
-    /**
-     * Scale d by m, checking for overflow.
-     * This has a short name to make above code more readable.
-     */
     static double x(double d, long m, long over) {
         if (d >  over) {
             return Long.MAX_VALUE;
@@ -72,48 +68,24 @@ public enum TrafficUnit {
         return d * m;
     }
 
-    /**
-     *
-     * @param sourceDuration
-     * @param sourceUnit
-     * @return
-     */
     public double convert(double sourceDuration, TrafficUnit sourceUnit) {
         throw new AbstractMethodError();
     }
 
-    /**
-     *
-     * @param duration
-     * @return
-     */
     public double toB(double duration) {
         throw new AbstractMethodError();
     }
 
-    /**
-     *
-     * @param duration
-     * @return
-     */
     public double toKB(double duration) {
         throw new AbstractMethodError();
     }
 
-    /**
-     *
-     * @param duration
-     * @return
-     */
+
     public double toMB(double duration) {
         throw new AbstractMethodError();
     }
 
-    /**
-     *
-     * @param duration
-     * @return
-     */
+
     public double toGB(double duration) {
         throw new AbstractMethodError();
     }

@@ -173,9 +173,9 @@ public abstract class AbstractMatchFilter extends BasePipeFilter<Object, Object>
     /**
      * get object from map or object
      *
-     * @param value
-     * @param center
-     * @return
+     * @param value 值
+     * @param center 匹配对象
+     * @return 最终值
      */
     protected Object getObjectOfMap(Object value, String center) {
         Map<Object, Object> colMap;
