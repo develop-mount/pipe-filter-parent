@@ -22,7 +22,7 @@ max-size-filter为内置的处理指令，引擎内部包括很多指令
         <dependency>
             <groupId>icu.develop</groupId>
             <artifactId>pipe-filter</artifactId>
-            <version>RELEASE</version>
+            <version>1.0.1</version>
         </dependency>
 ```
 
